@@ -1,0 +1,27 @@
+EJERCICIO 1 NEO4J
+CREATE (y:Person { name:'You' })
+CREATE (n:Database { name:'Neo4j' })
+CREATE (a:Person { name:'Anna' })
+CREATE (r:Person { name:'Rajesh' })
+CREATE (And:Person { name:'Andrew' })
+CREATE (j:Person { name:'Johan' })
+CREATE (Jul:Person { name:'Julia' })
+CREATE (ama:Person:Expert {name: 'Amanda'})
+CREATE
+	(y)-[:likes]->(n)
+CREATE
+	(y)-[:Friend]->(a)
+CREATE
+	(y)-[:Friend]->(r)
+CREATE
+	(y)-[:Friend]->(And)
+CREATE
+	(y)-[:Friend]->(j)
+CREATE
+	(y)-[:Friend]->(Jul)
+CREATE
+	(a)-[:FRIEND]->(ama)
+CREATE
+	(ama)-[:WORKED_WITH]->(n)
+
+RETURN y,n,j,Jul,And,a,r,ama
