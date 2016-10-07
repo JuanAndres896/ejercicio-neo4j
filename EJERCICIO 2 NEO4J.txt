@@ -1,0 +1,161 @@
+EJERCICIO 2 NEO4J
+
+CREACION DE NODOS - INCISO 1
+CREATE (dd:Programador { nombre: "Diego", carrera: "Computacion"})
+CREATE (mm:Programador { nombre: "Mario", carrera: "Computacion"})
+CREATE (jo:Programador { nombre: "Joice", carrera: "Computacion"})
+CREATE (je:Programador { nombre: "Jennifer", carrera: "Computacion"})
+CREATE (ke:Programador { nombre: "Kevin", carrera: "Computacion"})
+CREATE (pa:Programador { nombre: "Pablo", carrera: "Computacion"})
+CREATE (jl:Programador { nombre: "Chepe Luis", carrera: "Mecatronica"})
+CREATE (ch:Programador { nombre: "Christian", carrera: "Mecatronica"})
+CREATE (ra:Programador { nombre: "Rafael", carrera: "Bioinformatica"})
+RETURN dd, mm, jo, je, ke, pa, jl, ch, ra
+
+INCISO 2
+CREATE (dd:Programador { nombre: "Diego", carrera: "Computacion"})
+CREATE (mm:Programador { nombre: "Mario", carrera: "Computacion"})
+CREATE (jo:Programador { nombre: "Joice", carrera: "Computacion"})
+CREATE (je:Programador { nombre: "Jennifer", carrera: "Computacion"})
+CREATE (ke:Programador { nombre: "Kevin", carrera: "Computacion"})
+CREATE (pa:Programador { nombre: "Pablo", carrera: "Computacion"})
+CREATE (jl:Programador { nombre: "Chepe Luis", carrera: "Mecatronica"})
+CREATE (ch:Programador { nombre: "Christian", carrera: "Mecatronica"})
+CREATE (ra:Programador { nombre: "Rafael", carrera: "Bioinformatica"})
+CREATE (c:Lenguaje { nombre: "C"})
+CREATE (jvm:Lenguaje { nombre: "Java"})
+CREATE (py:Lenguaje { nombre: "Python"})
+CREATE (sca:Lenguaje { nombre: "SCALA"})
+CREATE (vlv:Proyecto { nombre: "VivaLaVida"})
+CREATE (mrp:Proyecto { nombre: "MiRobotPreferido"})
+CREATE (adn:Proyecto { nombre: "MiADN"})
+CREATE
+	(dd)-[:Experto_En]->(py)
+CREATE
+	(mm)-[:Experto_En]->(py)
+CREATE
+	(jo)-[:Experto_En]->(py)
+CREATE
+	(ke)-[:Experto_En]->(c)
+CREATE
+	(jl)-[:Experto_En]->(c)
+CREATE
+	(ch)-[:Experto_En]->(c)
+CREATE
+	(je)-[:Experto_En]->(jvm)
+CREATE
+	(pa)-[:Experto_En]->(jvm)
+CREATE
+	(ra)-[:Experto_En]->(jvm)
+CREATE
+	(vlv)-[:Empleado_En]->(py)
+CREATE
+	(mrp)-[:Empleado_En]->(c)
+CREATE
+	(adn)-[:Empleado_En]->(jvm)
+CREATE
+	(jl)-[:Trabajo_En]->(mrp)
+CREATE
+	(ke)-[:Trabajo_En]->(mrp)
+CREATE
+	(ch)-[:Trabajo_En]->(mrp)
+CREATE
+	(je)-[:Trabajo_En]->(adn)
+CREATE
+	(pa)-[:Trabajo_En]->(adn)
+CREATE
+	(ra)-[:Trabajo_En]->(adn)
+CREATE
+	(dd)-[:Trabajo_En]->(vlv)
+CREATE
+	(jo)-[:Trabajo_En]->(vlv)
+CREATE
+	(mm)-[:Trabajo_En]->(vlv)
+RETURN dd, mm, jo, je, ke, pa, jl, ch, ra, c, jvm, py, vlv, mrp, adn
+
+INCISO 3
+CREATE (dd:Programador { nombre: "Diego", carrera: "Computacion"})
+CREATE (mm:Programador { nombre: "Mario", carrera: "Computacion"})
+CREATE (jo:Programador { nombre: "Joice", carrera: "Computacion"})
+CREATE (je:Programador { nombre: "Jennifer", carrera: "Computacion"})
+CREATE (ke:Programador { nombre: "Kevin", carrera: "Computacion"})
+CREATE (pa:Programador { nombre: "Pablo", carrera: "Computacion"})
+CREATE (jl:Programador { nombre: "Chepe Luis", carrera: "Mecatronica"})
+CREATE (ch:Programador { nombre: "Christian", carrera: "Mecatronica"})
+CREATE (ra:Programador { nombre: "Rafael", carrera: "Bioinformatica"})
+CREATE (web:Empresa { nombre: "DesarrollosWEB"})
+CREATE (mov:Empresa { nombre: "MovemosRobots"})
+CREATE (rus:Empresa { nombre: "RobotsRUS"})
+CREATE
+	(dd)-[:Labora]->(web)
+CREATE
+	(ke)-[:Labora]->(web)
+CREATE
+	(ra)-[:Labora]->(web)
+CREATE
+	(mm)-[:Labora]->(mov)
+CREATE
+	(ch)-[:Labora]->(mov)
+CREATE
+	(pa)-[:Labora]->(mov)
+CREATE
+	(jl)-[:Labora]->(rus)
+CREATE
+	(jo)-[:Labora]->(rus)
+CREATE
+	(je)-[:Labora]->(rus)
+RETURN dd, mm, jo, je, ke, pa, jl, ch, ra, rus, mov, web
+
+INCISO 4
+CREATE (dd:Programador { nombre: "Diego", carrera: "Computacion"})
+CREATE (mm:Programador { nombre: "Mario", carrera: "Computacion"})
+CREATE (jo:Programador { nombre: "Joice", carrera: "Computacion"})
+CREATE (je:Programador { nombre: "Jennifer", carrera: "Computacion"})
+CREATE (ke:Programador { nombre: "Kevin", carrera: "Computacion"})
+CREATE (pa:Programador { nombre: "Pablo", carrera: "Computacion"})
+CREATE (jl:Programador { nombre: "Chepe Luis", carrera: "Mecatronica"})
+CREATE (ch:Programador { nombre: "Christian", carrera: "Mecatronica"})
+CREATE (ra:Programador { nombre: "Rafael", carrera: "Bioinformatica"})
+CREATE (c:Lenguaje { nombre: "C"})
+CREATE (jvm:Lenguaje { nombre: "Java"})
+CREATE (py:Lenguaje { nombre: "Python"})
+CREATE (sca:Lenguaje { nombre: "SCALA"})
+CREATE (vlv:Proyecto { nombre: "VivaLaVida"})
+CREATE (mrp:Proyecto { nombre: "MiRobotPreferido"})
+CREATE (adn:Proyecto { nombre: "MiADN"})
+CREATE (web:Empresa { nombre: "DesarrollosWEB"})
+CREATE (mov:Empresa { nombre: "MovemosRobots"})
+CREATE (rus:Empresa { nombre: "RobotsRUS"})
+CREATE
+	(dd)-[:Experto_En]->(py)
+CREATE
+	(mm)-[:Experto_En]->(py)
+CREATE
+	(jo)-[:Experto_En]->(py)
+CREATE
+	(je)-[:Experto_En]->(jvm)
+CREATE
+	(pa)-[:Experto_En]->(jvm)
+CREATE
+	(ra)-[:Experto_En]->(jvm)
+CREATE
+	(vlv)-[:Empleado_En]->(py)
+CREATE
+	(dd)-[:Quiere_Aprender]->(jvm)
+CREATE
+	(mm)-[:Quiere_Aprender]->(jvm)
+CREATE
+	(jo)-[:Quiere_Aprender]->(jvm)
+CREATE
+	(ra)-[:Quiere_Aprender]->(py)
+CREATE
+	(pa)-[:Quiere_Aprender]->(py)
+CREATE
+	(je)-[:Quiere_Aprender]->(py)
+CREATE
+	(jl)-[:Quiere_Aprender]->(sca)
+CREATE
+	(ke)-[:Quiere_Aprender]->(sca)
+CREATE
+	(ch)-[:Quiere_Aprender]->(sca)
+RETURN dd, mm, jo, je, ke, pa, jl, ch, ra, py, jvm, sca
